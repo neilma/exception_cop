@@ -21,20 +21,24 @@ Or install it yourself as:
 require 'exception_cop'
 
 irb(main):003:0> raise
+
 RuntimeError:
         from (irb):3
         from F:/Ruby193/bin/irb:12:in `<main>'
+
 irb(main):004:0> ExceptionCop.configure{|c| c.white_list=[RuntimeError]}
 => nil
+
 irb(main):005:0> raise
 => nil
+
 irb(main):006:0> ExceptionCop.reset
 => nil
+
 irb(main):006:0> raise
 RuntimeError:
         from (irb):6
         from F:/Ruby193/bin/irb:12:in `<main>'
-
 
 ## Contributing
 
